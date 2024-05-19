@@ -1,12 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+
+
+/* shared related style */
 * {
 
     font-family: "Work Sans", sans-serif;
 
 }
-/* shared related style */
-.btn-primary{
+.text-light {
+    color: rgb(114, 114, 114);
+    font-family: Work Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+   
+   
+
+}
+.btn-primary {
     color: rgb(255, 255, 255);
     font-family: Work Sans;
     font-size: 20px;
@@ -16,8 +28,16 @@
     background: rgb(255, 144, 14);
     padding: 20px 25px;
     border: none;
-  
+
 }
+.section-title {
+    color: rgb(19, 19, 19);
+
+    font-size: 45px;
+    font-weight: 700;
+
+}
+
 
 
 /* header releted styles */
@@ -30,7 +50,7 @@ header {
 nav {
     display: flex;
     justify-content: space-between;
-align-items: center;
+    align-items: center;
 }
 
 nav>ul {
@@ -48,65 +68,173 @@ nav li a {
     text-decoration: none;
 }
 
-.nav-title{
-    color: rgb(19, 19, 19);
 
-font-size: 45px;
-font-weight: 700;
-
-}
-.banner-content{
+.banner-content {
     max-width: 600px;
     text-align: center;
     margin: 0 auto;
-    
+
 }
-.banner img{
+
+.banner img {
     width: 100%;
     margin-top: 20px;
 }
-.img-container img{
+
+.img-container img {
     max-width: 840px;
     width: 100%;
     display: block;
     text-align: center;
-    
+
 
 
 }
-.banner-title{
+
+.banner-title {
     color: rgb(19, 19, 19);
-    
+
     font-size: 64px;
     font-weight: 700;
-   
-}
-.banner-discription{
-    color: rgb(114, 114, 114);
-font-family: Work Sans;
-font-size: 16px;
-font-weight: 400;
-line-height: 26px;
-letter-spacing: 0%;
-text-align: center;
 
 }
+.Features{
+    display: flex;
+    margin-top: 130px;
+    gap: 100px;
+}
+.featured-content .card{
+    padding:5px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+box-shadow: 0px 4px 30px 0px #eee2e2db;
+background: rgb(255, 255, 255);
+}
+.featured-content .section-title {
+    border-left:5px solid rgb(255, 144, 14);
+    padding-left: 10px;
+}
+
+main {
+    max-width: 1440px;
+    margin:70px auto;
+}
+
+.teams-container {
+    display: flex;
+
+    align-items: center;
+
+}
+
+.teams-img-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.team-content {
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.teams-title {
+    font-size: 45px;
+
+}
+
+.teams-title .list {
+    color: rgb(114, 114, 114);
+     font-weight: 500;
+}
+
+.teams-title .Our {
+    color: rgb(19, 19, 19);
+    font-weight: 700;
+}
+
+.teams-title .Features {
+    color: rgb(255, 144, 14);
+    font-weight: 700;
+}
+/* fact section */
+.fact-card-container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 80px;
+}
+
+.fact-card-container .card{
+
+    box-sizing: border-box;
+border: 1px solid rgb(255, 144, 14);
+border-radius: 8px;    
+text-align: center;     
+padding: 40px 30px;     
+}
+.dom{
+    width: 50%;
+}
+.sponspors-section-title{
+    display: flex;
+    justify-content: space-evenly;
+}
+.Sponspors{
+    text-align: center;
+    margin-top: 139px;
+}
+
+
+/* .teams-img-container img{
+    max-width: 840px;
+    width: 100%;
+    
+} */
+footer{
+    border-radius: 8px;
+    background: rgb(255, 244, 231);
+    
+
+}
+
+.text-footer{
+    color: rgb(66, 66, 66);
+
+font-size: 20px;
+font-weight: 400;
+text-align: center;
+padding: 30px;
+}
+
+
+
+
 /* media query */
 @media screen and(max-width:576px) {
 
-    header{
+    header {
         padding: 20px;
     }
-    nav{
+
+    nav, .teams-container{
         flex-direction: column;
     }
+    ..team-content {
+        padding-left: 15px;
+        padding-right: 15px;
+}
 }
 
-@media screen and (min-widt:576px) and(max-width:922px){
-    header{
+@media screen and (min-widt:576px) and(max-width:922px) {
+    header {
         padding: 50px;
-}
-nav{
-    flex-direction: column;
-}
+    }
+
+    nav  {
+        flex-direction: column;
+    }
+    .teams-img-container{
+        grid-template-columns: 1fr;
+        display: block;
+    }
 }
